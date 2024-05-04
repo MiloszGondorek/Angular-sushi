@@ -1,0 +1,18 @@
+<div class="w-full bg-[#111012] py-[50px]">
+ <h1 class="macondo t2 text-[2.188rem] mx-auto w-fit">Discover our menu</h1>
+ <div class="grid list w-[95vw] max-w-[1500px] mx-auto mt-[30px]">
+  <img src="/assets/arrow_left.svg" alt="" class="arrow">
+  <div class="flex layoutW overflow-hidden gap-[20px]">
+   <div *ngFor="let i of items" class="w-1 min-w-[calc(20%-16px)] block">
+    <app-item [name]="i.name" [price]="i.price" />
+   </div>
+  </div>
+  <img src="/assets/arrow_right.svg" alt="" class="arrow ml-auto">
+ </div>
+ <div class="layoutW mt-[30px]">
+  <div class="w-[calc(20%-16px)] mx-auto">
+   <app-button link="/menu" text="Full menu" [arrow]="true" />
+  </div>
+  <!-- <a href="" class="ml-auto block w-fit t1">Full menu</a> -->
+ </div>
+</div>

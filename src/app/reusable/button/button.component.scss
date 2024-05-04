@@ -1,0 +1,30 @@
+a {
+  border: 2px solid #9d0208;
+  color: #9d0208;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #c8c8c8;
+  background-color: #9d0208;
+  transform: translateY(-5px);
+  box-shadow: -8px 8px 31px 0px rgba(130, 131, 138, 0.219);
+  border-radius: 2px;
+  .a1 {
+    opacity: 100%;
+  }
+  .a2 {
+    opacity: 0%;
+  }
+}
+
+img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}

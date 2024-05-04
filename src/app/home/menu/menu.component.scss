@@ -1,0 +1,18 @@
+.list {
+  grid-template-columns: auto auto auto;
+}
+
+.arrow {
+  display: block;
+  width: 25px;
+  opacity: 60%;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: all 0.3s;
+}
+
+.arrow:hover {
+  opacity: 100%;
+  transform: translateY(-5px);
+}

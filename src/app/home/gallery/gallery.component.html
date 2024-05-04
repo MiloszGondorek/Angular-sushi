@@ -1,0 +1,16 @@
+<div class="layoutW mt-[60px]">
+  <h1 class="macondo text-[2.188rem] t2 mx-auto w-fit">Gallery</h1>
+  <div class="grid grid-cols-3 gap-[20px] mt-[30px]">
+    <div class="imgContainer" *ngFor="let i of imgs" (click)="setImg(i)">
+      <img src="/assets/{{i}}" alt="">
+    </div>
+  </div>
+  <div class="w-[calc((100%/3)-(40px/3))] mx-auto mt-[30px]">
+    <app-button link="/gallery" text="Full gallery" [arrow]="true" />
+  </div>
+</div>
+<div class="large fixed top-0 left-0 w-screen h-screen bg-[#111012a1]" [ngClass]="{'hidden':src==''}"
+  (click)="hideImg()">
+  <img src="/assets/{{src}}" alt=""
+    class="block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[90vw] max-h-[90vh] object-cover">
+</div>
