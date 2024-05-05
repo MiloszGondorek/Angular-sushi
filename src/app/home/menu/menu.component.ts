@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ItemComponent } from '../../reusable/item/item.component';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Item, ItemComponent } from '../../reusable/item/item.component';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../reusable/button/button.component';
 
@@ -21,13 +21,45 @@ export class MenuComponent {
     new Item('Item 7'),
     new Item('Item 8'),
   ];
-}
 
-class Item {
-  name!: string;
-  price!: number;
-  constructor(name: string) {
-    this.name = name;
-    this.price = Math.floor(Math.random() * 50) + 50;
+  @ViewChild('itemsCont') itemsDiv!: ElementRef;
+  @ViewChild('item') itemData!: ElementRef;
+  moveX = 0;
+
+  moveRight() {
+    this.moveX--;
+    this.move();
+  }
+
+  moveLeft() {
+    this.moveX++;
+    this.move();
+  }
+
+  move() {
+    if (this.moveX > 0) {
+      this.moveX = this.itemsInView() - this.items.length;
+    }
+    if (this.moveX < this.itemsInView() - this.items.length) {
+      this.moveX = 0;
+    }
+
+    this.itemsDiv.nativeElement.style.transform = `translateX(${
+      this.moveX * (this.itemData.nativeElement.offsetWidth + 20)
+    }px)`;
+  }
+
+  itemsInView(): number {
+    const width = window.innerWidth;
+    if (width > 1280) {
+      return 5;
+    }
+    if (width > 1024) {
+      return 4;
+    }
+    if (width > 768) {
+      return 3;
+    }
+    return 2;
   }
 }

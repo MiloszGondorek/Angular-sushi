@@ -1,0 +1,16 @@
+<div class="grid grid-cols-4 grid-rows-2 gap-[20px]">
+ <div class="imgCont col-span-2" [ngClass]="reverse?'row-span-2':'row-span-1 !aspect-[unset]  order-1'"
+  [class.row-span-2]="img.length<=3" (click)="showImg(img[0])">
+  <img src="/assets/{{img[0]}}" alt="">
+ </div>
+ <div class="imgCont" [ngClass]="{ 'order-3': !reverse,'row-span-2':img.length<=3}" (click)="showImg(img[1])">
+  <img src="/assets/{{img[1]}}" alt="" *ngIf="img.length>1">
+ </div>
+ <div class="imgCont" [ngClass]="{ 'order-4': !reverse,'row-span-2':img.length<=3}" (click)="showImg(img[2])">
+  <img src="/assets/{{img[2]}}" alt="" *ngIf="img.length>2">
+ </div>
+ <div class="imgCont col-span-2 !aspect-[unset]" [ngClass]="reverse?'!aspect-[unset]':'row-span-2 order-2'"
+  *ngIf="img.length>3" (click)="showImg(img[3])">
+  <img src="/assets/{{img[3]}}" alt="">
+ </div>
+</div>

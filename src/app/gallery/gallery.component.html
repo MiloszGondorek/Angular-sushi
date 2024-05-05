@@ -1,0 +1,9 @@
+<app-page-header text="Gallery" />
+<div class="layoutW flex flex-col gap-[20px] mb-[50px]">
+ <app-section *ngFor="let i of sections" [img]="i.img" [reverse]="i.isReverse" (clickSrc)="setImg($event)" />
+</div>
+<div class="large fixed top-0 left-0 w-screen h-screen bg-[#111012a1]" [ngClass]="{'hidden':showSrc==''}"
+ (click)="hideImg()">
+ <img src="/assets/{{showSrc}}" alt=""
+  class="block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[90vw] max-h-[90vh] object-cover">
+</div>

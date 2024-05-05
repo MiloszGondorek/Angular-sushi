@@ -1,0 +1,9 @@
+<div class="flex gap-[35px] mx-auto w-fit">
+ <div class="line"></div>
+ <ng-container *ngFor="let group of groups">
+  <h1 class="my-auto text-[1.563rem] cursor-pointer hover:opacity-100"
+   [ngClass]="{'t2':group.id==selected,'opacity-60':group.id!=selected}" (click)="selectGroup(group.id)">
+   {{group.name}}</h1>
+  <div class="line"></div>
+ </ng-container>
+</div>

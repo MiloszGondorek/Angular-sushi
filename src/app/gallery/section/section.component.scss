@@ -1,0 +1,24 @@
+.imgCont {
+  position: relative;
+  aspect-ratio: 1;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    max-width: unset;
+    cursor: pointer;
+    -webkit-user-drag: none;
+  }
+
+  img:hover {
+    opacity: 100%;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+  }
+}

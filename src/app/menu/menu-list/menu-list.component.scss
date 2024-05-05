@@ -1,0 +1,14 @@
+.line {
+  height: 50px;
+  width: 1px;
+  background-color: #e7e7e781;
+}
+
+h1 {
+  transition: all 0.3s;
+  user-select: none;
+}
+
+h1:hover {
+  transform: translateY(-3px);
+}
