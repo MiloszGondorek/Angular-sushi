@@ -10,13 +10,5 @@ import { Component, Input } from '@angular/core';
 export class ItemComponent {
   @Input() name!: string;
   @Input() price!: number;
-}
-
-export class Item {
-  name!: string;
-  price!: number;
-  constructor(name: string) {
-    this.name = name;
-    this.price = Math.floor(Math.random() * 50) + 50;
-  }
+  @Input() src!: string;
 }

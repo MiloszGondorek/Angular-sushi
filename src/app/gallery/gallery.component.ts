@@ -12,21 +12,18 @@ import { PageHeaderComponent } from '../reusable/page-header/page-header.compone
 })
 export class GalleryComponent implements OnInit {
   img: string[] = [
-    'sushi1.jpg',
-    'sushi2.jpg',
-    'sushi3.jpg',
-    'sushi4.jpg',
-    'sushi5.jpg',
-    'sushi1.jpg',
-    'sushi2.jpg',
-    'sushi3.jpg',
-    'sushi4.jpg',
-    'sushi5.jpg',
-    'sushi1.jpg',
-    'sushi2.jpg',
-    'sushi3.jpg',
-    'sushi4.jpg',
-    'sushi5.jpg',
+    'images/img1.jpg',
+    'images/img2.jpg',
+    'images/img3.jpg',
+    'images/img4.jpg',
+    'images/img5.jpg',
+    'images/img6.jpg',
+    'images/img7.jpg',
+    'images/img8.jpg',
+    'images/img9.jpg',
+    'images/img10.jpg',
+    'images/img11.jpg',
+    'images/img12.jpg',
   ];
 
   sections: section[] = [];

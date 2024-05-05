@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { Item, ItemComponent } from '../../reusable/item/item.component';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ItemComponent } from '../../reusable/item/item.component';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../reusable/button/button.component';
+import { Item, ItemsInShop } from '../../itemList';
 
 @Component({
   selector: 'app-menu',
@@ -11,15 +12,18 @@ import { ButtonComponent } from '../../reusable/button/button.component';
   styleUrl: './menu.component.scss',
 })
 export class MenuComponent {
+  shop = new ItemsInShop();
   items: Item[] = [
-    new Item('Item 1'),
-    new Item('Item 2'),
-    new Item('Item 3'),
-    new Item('Item 4'),
-    new Item('Item 5'),
-    new Item('Item 6'),
-    new Item('Item 7'),
-    new Item('Item 8'),
+    this.shop.getItemById(0),
+    this.shop.getItemById(2),
+    this.shop.getItemById(5),
+    this.shop.getItemById(9),
+    this.shop.getItemById(11),
+    this.shop.getItemById(14),
+    this.shop.getItemById(15),
+    this.shop.getItemById(18),
+    this.shop.getItemById(22),
+    this.shop.getItemById(23),
   ];
 
   @ViewChild('itemsCont') itemsDiv!: ElementRef;

@@ -12,12 +12,12 @@ import { ButtonComponent } from '../../reusable/button/button.component';
 export class GalleryComponent {
   src: string = '';
   imgs: Img[] = [
-    new Img('sushi1.jpg'),
-    new Img('locale.jpg'),
-    new Img('main.jpg'),
-    new Img('locale.jpg'),
-    new Img('main.jpg'),
-    new Img('sushi1.jpg'),
+    new Img('images/img1.jpg'),
+    new Img('images/img8.jpg'),
+    new Img('images/img11.jpg'),
+    new Img('images/img4.jpg'),
+    new Img('images/img12.jpg'),
+    new Img('images/img6.jpg'),
   ];
   setImg(src: string) {
     this.src = src;

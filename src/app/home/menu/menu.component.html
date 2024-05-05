@@ -7,7 +7,7 @@
     <div *ngFor="let i of items"
      class="w-1 min-w-[calc(20%-16px)] max-xl:min-w-[calc(25%-15.5px)] max-lg:min-w-[calc(100%/3-13px)] max-md:min-w-[calc(50%-13px)] max-sm:min-w-[100%] block"
      #item>
-     <app-item [name]="i.name" [price]="i.price" />
+     <app-item [name]="i.name" [price]="i.price" [src]="i.img" />
     </div>
    </div>
   </div>
