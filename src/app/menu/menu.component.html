@@ -2,7 +2,9 @@
 <div class="layoutW">
  <app-menu-list [groups]="groups" (groupEmit)="setGroup($event)" />
  <p class="max-w-[min(1000px,80%)] mx-auto text-center mt-[20px]"> {{groups[groupId].description}}</p>
- <div class="grid grid-cols-5 gap-[30px] my-[50px]" #items>
+ <div
+  class="grid grid-cols-5 max-xl:grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[30px] my-[50px]"
+  #items>
   <app-item *ngFor="let i of groups[groupId].items" [name]="i.name" [price]="i.price" />
  </div>
 </div>

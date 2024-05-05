@@ -1,6 +1,6 @@
-<div class="grid grid-cols-2">
- <div class="flex flex-col gap-[25px] text-justify py-[50px] my-auto"
-  [ngClass]="{'order-2 ml-[30px] mr-[max(7.5vw,calc(50vw-700px))]':reverse,'mr-[30px] ml-[max(7.5vw,calc(50vw-700px))]':!reverse}">
+<div class="grid grid-cols-2 max-lg:grid-cols-1 max-lg:grid-rows-2">
+ <div class="flex flex-col gap-[25px] text-justify py-[50px] my-auto max-lg:mx-[7.5vw]"
+  [ngClass]="{'lg:order-2 ml-[30px] mr-[max(7.5vw,calc(50vw-700px))]':reverse,'mr-[30px] ml-[max(7.5vw,calc(50vw-700px))]':!reverse}">
   <ng-content />
  </div>
  <div class="relative img">

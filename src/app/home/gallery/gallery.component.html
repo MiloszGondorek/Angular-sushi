@@ -1,11 +1,11 @@
 <div class="layoutW mt-[60px]">
   <h1 class="macondo text-[2.188rem] t2 mx-auto w-fit">Gallery</h1>
-  <div class="grid grid-cols-3 gap-[20px] mt-[30px]">
-    <div class="imgContainer" *ngFor="let i of imgs" (click)="setImg(i)">
-      <img src="/assets/{{i}}" alt="">
+  <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-[20px] mt-[30px]">
+    <div class="imgContainer" *ngFor="let i of imgs" (click)="setImg(i.src)" [ngClass]="{'max-md:hidden':(i.id>2)}">
+      <img src="/assets/{{i.src}}" alt="">
     </div>
   </div>
-  <div class="w-[calc((100%/3)-(40px/3))] mx-auto mt-[30px]">
+  <div class="w-[calc((100%/3)-(40px/3))] mx-auto mt-[30px] max-lg:w-[50%] max-md:w-[100%]">
     <app-button link="/gallery" text="Full gallery" [arrow]="true" />
   </div>
 </div>

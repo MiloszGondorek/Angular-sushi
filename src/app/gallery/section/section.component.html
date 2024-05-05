@@ -1,4 +1,4 @@
-<div class="grid grid-cols-4 grid-rows-2 gap-[20px]">
+<div class="grid grid-cols-4 grid-rows-2 max-md:grid-cols-2 max-md:grid-rows-4 gap-[20px]">
  <div class="imgCont col-span-2" [ngClass]="reverse?'row-span-2':'row-span-1 !aspect-[unset]  order-1'"
   [class.row-span-2]="img.length<=3" (click)="showImg(img[0])">
   <img src="/assets/{{img[0]}}" alt="">

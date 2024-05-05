@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Item, ItemComponent } from '../../reusable/item/item.component';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../reusable/button/button.component';
@@ -24,7 +24,16 @@ export class MenuComponent {
 
   @ViewChild('itemsCont') itemsDiv!: ElementRef;
   @ViewChild('item') itemData!: ElementRef;
+
   moveX = 0;
+  static testowy: MenuComponent;
+
+  constructor() {
+    MenuComponent.testowy = this;
+    window.addEventListener('resize', function () {
+      MenuComponent.testowy.move();
+    });
+  }
 
   moveRight() {
     this.moveX--;
@@ -60,6 +69,9 @@ export class MenuComponent {
     if (width > 768) {
       return 3;
     }
-    return 2;
+    if (width > 640) {
+      return 2;
+    }
+    return 1;
   }
 }

@@ -2,6 +2,11 @@
   height: 50px;
   width: 1px;
   background-color: #e7e7e781;
+  @media screen and (max-width: 1024px) {
+    height: 1px;
+    width: 80%;
+    margin: auto;
+  }
 }
 
 h1 {

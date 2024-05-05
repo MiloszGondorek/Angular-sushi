@@ -1,20 +1,21 @@
 <div class="w-full bg-[#111012] py-[50px]">
  <h1 class="macondo t2 text-[2.188rem] mx-auto w-fit">Discover our menu</h1>
- <div class="grid list w-[95vw] max-w-[1500px] mx-auto mt-[30px]">
+ <div class="grid list w-[95vw] max-lg:w-[90vw] max-w-[1500px] mx-auto mt-[30px]">
   <img src="/assets/arrow_left.svg" alt="" class="arrow" (click)="moveLeft()">
-  <div class="layoutW overflow-hidden">
-   <div class="flex gap-[20px] itemsCont" #itemsCont>
-    <div *ngFor="let i of items" class="w-1 min-w-[calc(20%-16px)] block" #item>
+  <div class="layoutW max-lg:w-[70vw] overflow-hidden">
+   <div class="flex gap-[20px] itemsCont px-[1px]" #itemsCont>
+    <div *ngFor="let i of items"
+     class="w-1 min-w-[calc(20%-16px)] max-xl:min-w-[calc(25%-15.5px)] max-lg:min-w-[calc(100%/3-13px)] max-md:min-w-[calc(50%-13px)] max-sm:min-w-[100%] block"
+     #item>
      <app-item [name]="i.name" [price]="i.price" />
     </div>
    </div>
   </div>
   <img src="/assets/arrow_right.svg" alt="" class="arrow ml-auto" (click)="moveRight()">
  </div>
- <div class="layoutW mt-[30px]">
-  <div class="w-[calc(20%-16px)] mx-auto">
+ <div class="layoutW mt-[30px] max-lg:w-[70vw]">
+  <div class="w-[calc(20%-16px)] max-xl:w-[200px] max-lg:w-[calc(100%-2*(100%/3-15px)-40px)] max-md:w-[70vw] mx-auto">
    <app-button link="/menu" text="Full menu" [arrow]="true" />
   </div>
-  <!-- <a href="" class="ml-auto block w-fit t1">Full menu</a> -->
  </div>
 </div>

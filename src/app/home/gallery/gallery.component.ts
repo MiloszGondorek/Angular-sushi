@@ -11,13 +11,13 @@ import { ButtonComponent } from '../../reusable/button/button.component';
 })
 export class GalleryComponent {
   src: string = '';
-  imgs: string[] = [
-    'sushi1.jpg',
-    'locale.jpg',
-    'main.jpg',
-    'locale.jpg',
-    'main.jpg',
-    'sushi1.jpg',
+  imgs: Img[] = [
+    new Img('sushi1.jpg'),
+    new Img('locale.jpg'),
+    new Img('main.jpg'),
+    new Img('locale.jpg'),
+    new Img('main.jpg'),
+    new Img('sushi1.jpg'),
   ];
   setImg(src: string) {
     this.src = src;
@@ -25,5 +25,16 @@ export class GalleryComponent {
 
   hideImg() {
     this.src = '';
+  }
+}
+
+class Img {
+  src!: string;
+  id = 0;
+  static lastId = -1;
+  constructor(src: string) {
+    Img.lastId++;
+    this.id = Img.lastId;
+    this.src = src;
   }
 }
